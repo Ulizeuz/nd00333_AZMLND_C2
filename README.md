@@ -120,6 +120,10 @@ In the published pipeline overview we can see the status (ACTIVE) and a REST end
 
 ![publish](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img15_published.png)
 
+And we can see the scheduled run
+
+![Scheduled](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img18_completed%20run.png)
+
 
 
 # VIDEO
