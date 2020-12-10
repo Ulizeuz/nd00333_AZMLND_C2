@@ -37,7 +37,7 @@ As mention before, autentication step was done for us. In this step we should In
 
 Once security was enabled and authentication is completed we create an Automated ML run. We use in this example the Bankmarketing dataset:
 
-![dataset](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img01_dataset.png)
+![dataset](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img02_dataset.png)
 
 Then, we create a new Automated ML experiment and run it using Clasification and ensuring Explain Best Model is checked. After some minutes (about 30) the experiment is completed:
 
