@@ -1,6 +1,6 @@
 # OVERVIEW
 
-Basically, Machine Learning Operations is applying DevOps principles like deploying a model, consuming endpoints and automating a pipeline. We show a end to end Operationalizing Machine Learning:
+Machine Learning Operations is applying DevOps principles like deploying a model, consuming endpoints and automating a pipeline. In this project we work with the Bankmarketing dataset and Azure to configure an end to end cloud-based Operationalizing Machine Learning with the following steps:
 
 - Auto ML model
 - Deploy the best Model
@@ -12,7 +12,10 @@ We don't include Autentication step because was done for us in the enviroment. W
 
 Next, we enable Application Insight to review information about the service when consuming model.
 
-Finally, we'll create and publish a pipeline. At the end of this file, you can find a screencast with step-by-step process
+Finally, we'll create, publish an consume a pipeline. This pipeline it's important in a deployment because allows to automate the workflow and external services can interact with it and do the work more efficiently.
+
+
+At the end of this file, you can find a screencast with step-by-step process
 
 # ARCHITECTURAL DIAGRAM
 
