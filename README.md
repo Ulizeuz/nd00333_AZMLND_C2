@@ -40,14 +40,18 @@ As mention before, autentication step was done for us. In this step we should In
 
 Once security was enabled and authentication is completed we create an Automated ML run. We use in this example the Bankmarketing dataset:
 
+### Bankmarketing dataset
+
 ![dataset](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img02_dataset.png)
 
 Then, we create a new Automated ML experiment and run it using Clasification and ensuring Explain Best Model is checked. After some minutes (about 30) the experiment is completed:
 
+### Experiment completed
 ![experiment completed](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img03_experiment.png)
 
 And we can get the best model. For this, was VotingEnsemble with 0.9162 of accuracy:
 
+### Best model
 ![Best Model](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img04_model.png)
 
 ## Deploy the best Model
@@ -60,10 +64,12 @@ We use this model to deploy to interact with the HTTP API service. In this step 
 
 The next step, after the best model was deployed, is enabling Aplication Insights and retrieve logs. For this, we use the logs.py script with this code: service.update(enable_app_insights=True):
 
+### logs.py
 ![Logs](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img05_logs.png)
 
 And we can find in Detail tab that Application Insights is enabled:
 
+### Insights
 ![Logs](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img06_insights.png)
 
 ## Consume model endpoint
@@ -72,6 +78,7 @@ And we can find in Detail tab that Application Insights is enabled:
 
 First, we consume the model using Swagger. Swagger is a useful tool to display the contents of the API. Next images show Swagger running on localhost and the HTTP API methods and responses for the model:
 
+#### HTTP API methods
 ![Swagger server](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img07_swagger1.png)
 
 ![Swagger server](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img08_swagger2.png)
@@ -82,12 +89,14 @@ First, we consume the model using Swagger. Swagger is a useful tool to display t
 
 We use the endpoint script to interact with the trained model. To use it, we need update the scoring_uri and the key to match with our service:
 
+#### Endpoint
 ![Swagger server](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img10_endpoint.png)
 
 ### Benchmark
 
 To load-test our model we run again endpoint.py script and a data.json apears in our directory. Then, we run the benchmark file to retrieve performace results:
 
+#### Benchmark
 ![benchmark](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img11_benchmark.png)
 
 ## Create and publish a pipeline
@@ -98,33 +107,39 @@ Finally, we use Jupyter notebook to create and publish a pipeline. We can verify
 
 - The pipeline created:
 
+#### Pipeline
 ![pipeline](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img12_pipeline.png)
 
 - The pipeline endpoint:
 
+#### Endpoint
 ![pipeline](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img13_pipeline_endpoint.png)
 
 - Bankmarketing dataset
 
+#### dataset
 ![dataset](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img14_marketing_ds.png)
 
 ### Pipeline published
 
 Finally we publish the pipeline. We use runDetails to monitoring the progress:
 
-
+#### Pipeline
 ![publish](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img16_publishing.png)
 
+#### Rundetails
 ![publish](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img17_rundetails.png)
 
 
 
 In the published pipeline overview we can see the status (ACTIVE) and a REST endpoint
 
+#### Active
 ![publish](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img15_published.png)
 
 And we can see the scheduled run
 
+#### scheduled run
 ![Scheduled](https://github.com/Ulizeuz/nd00333_AZMLND_C2/blob/master/Screenshots/img18_completed%20run.png)
 
 
