@@ -1,0 +1,4 @@
+from azureml.pipeline.core.schedule import ScheduleRecurrence, Schedule
+hourly = ScheduleRecurrence(frequency="Hours", interval=2, start_time='2020-10-28T17:00:00')
+pipeline_schedule = Schedule.create(ws, name="Enter a name", description="Trains model every 2 hours", pipeline_id = published_pipeline.id, experiment_name="Enter the name of the experiment", recurrence=hourly)
+print(pipeline_schedule)
