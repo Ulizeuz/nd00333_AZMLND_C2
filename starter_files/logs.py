@@ -5,7 +5,7 @@ from azureml.core.webservice import Webservice
 ws = Workspace.from_config()
 
 # Set with the deployment name
-name = "automl-exercise"
+name = "demo-model-deploy"
 
 # load existing web service
 service = Webservice(name=name, workspace=ws)
@@ -17,5 +17,3 @@ logs = service.get_logs()
 
 for line in logs.split('\n'):
     print(line)
-
-service.update(enable_app_insights=True)
